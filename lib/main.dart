@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class Myapp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,9 +11,35 @@ class Myapp extends StatelessWidget{
           title: Text('Expanded'),
           centerTitle: true,
         ),
-        body: ,
+        body: Row(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(30),
+                color: Colors.red,
+                child: Text('1'),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(30),
+                color: Colors.blue,
+                child: Text('1'),
+              ),
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
+                padding: EdgeInsets.all(30),
+                color: Colors.green,
+                child: Text('1'),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
-
 }
